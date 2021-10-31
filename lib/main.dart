@@ -91,6 +91,15 @@ class _MyHomePageState extends State<MyHomePage> {
               setState(() {
                 li.removeAt(index);
               });
+              Scaffold.of(ctx).showSnackBar(
+                SnackBar(
+                  content: Text("Item Deleted"),
+                  action: SnackBarAction(
+                    label: "Undo",
+                    onPressed: () => li.insert(index, item),
+                  ),
+                ),
+              );
             },
           );
         },
