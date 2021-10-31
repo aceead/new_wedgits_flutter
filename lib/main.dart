@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icons.delete,
                 color: Colors.white,
               ),
-              alignment: Alignment.centerRight,
+              alignment: Alignment.centerLeft,
             ),
             onDismissed: (DismissDirection direction) {
               setState(() {
