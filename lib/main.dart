@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
             animation: true,
             percent: 0.8,
             center: new Text(
-              "70.0%",
+              "80.0%",
               style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
             ),
             footer: new Text(
