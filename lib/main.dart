@@ -96,7 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   content: Text("Item Deleted"),
                   action: SnackBarAction(
                     label: "Undo",
-                    onPressed: () => li.insert(index, item),
+                    onPressed: () {
+                      setState(() {
+                        li.insert(index, item);
+                      });
+                    },
                   ),
                 ),
               );
