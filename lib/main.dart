@@ -81,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (ctx, index) {
           final item = li[index];
           return Dismissible(
+            key: Key(item),
             child: ListTile(
               title: Center(
                 child: Text(item),
