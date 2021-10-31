@@ -63,6 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  final li = List<String>.generate(20, (index) => "Item Number ${index + 1}");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
       // body: imagePicker(),
       // floatingActionButton: imagePFAP(),
       //body: formFielsBuilder(),
-      body: null,
+      body: ListView.builder(
+        itemCount: li.length,
+        itemBuilder: (ctx, index) {
+          final items = li[index];
+          return ListTile(
+            title: Center(
+              child: Text(items),
+            ),
+          );
+        },
+      ),
     );
   }
 
