@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  final li = List<String>.generate(40, (index) => "Item Number ${index + 1}");
+  final li = List<String>.generate(20, (index) => "Item Number ${index + 1}");
 
   @override
   Widget build(BuildContext context) {
