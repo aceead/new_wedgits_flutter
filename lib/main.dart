@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
             radius: 120.0,
             lineWidth: 13.0,
             animation: true,
-            percent: 0.7,
+            percent: 0.8,
             center: new Text(
               "70.0%",
               style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
