@@ -87,13 +87,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(item),
               ),
             ),
+            background: Container(
+              color: Colors.red,
+              child: Icon(Icons.delete),
+              alignment: Alignment.centerRight,
+            ),
             onDismissed: (DismissDirection direction) {
               setState(() {
                 li.removeAt(index);
               });
               Scaffold.of(ctx).showSnackBar(
                 SnackBar(
-                  content: Text("Item Deleted"),
+                  content: Text(direction == DismissDirection.startToEnd ? "$item Deleted" : "$item Liked"),
                   action: SnackBarAction(
                     label: "Undo",
                     onPressed: () {
