@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           new CircularPercentIndicator(
             radius: 130.0,
             animation: true,
-            animationDuration: 1200,
+            animationDuration: 12000,
             lineWidth: 15.0,
             percent: 0.4,
             center: new Text(
