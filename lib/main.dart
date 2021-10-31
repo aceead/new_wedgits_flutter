@@ -87,6 +87,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(item),
               ),
             ),
+            onDismissed: (DismissDirection direction) {
+              setState(() {
+                li.removeAt(index);
+              });
+            },
           );
         },
       ),
