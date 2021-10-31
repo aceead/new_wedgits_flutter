@@ -95,6 +95,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               alignment: Alignment.centerLeft,
             ),
+            secondaryBackground: Container(
+              color: Colors.green,
+              child: Icon(
+                Icons.edit,
+                color: Colors.white,
+              ),
+              alignment: Alignment.centerRight,
+            ),
             onDismissed: (DismissDirection direction) {
               setState(() {
                 li.removeAt(index);
