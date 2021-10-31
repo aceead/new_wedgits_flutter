@@ -76,54 +76,58 @@ class _MyHomePageState extends State<MyHomePage> {
       // body: imagePicker(),
       // floatingActionButton: imagePFAP(),
       //body: formFielsBuilder(),
-      body: ListView.builder(
-        itemCount: li.length,
-        itemBuilder: (ctx, index) {
-          final item = li[index];
-          return Dismissible(
-            key: Key(item),
-            child: ListTile(
-              title: Center(
-                child: Text(item),
-              ),
+      body: lvDismissble(),
+    );
+  }
+
+  ListView lvDismissble() {
+    return ListView.builder(
+      itemCount: li.length,
+      itemBuilder: (ctx, index) {
+        final item = li[index];
+        return Dismissible(
+          key: Key(item),
+          child: ListTile(
+            title: Center(
+              child: Text(item),
             ),
-            background: Container(
-              color: Colors.red,
-              child: Icon(
-                Icons.delete,
-                color: Colors.white,
-              ),
-              alignment: Alignment.centerLeft,
+          ),
+          background: Container(
+            color: Colors.red,
+            child: Icon(
+              Icons.delete,
+              color: Colors.white,
             ),
-            secondaryBackground: Container(
-              color: Colors.green,
-              child: Icon(
-                Icons.thumb_up,
-                color: Colors.white,
-              ),
-              alignment: Alignment.centerRight,
+            alignment: Alignment.centerLeft,
+          ),
+          secondaryBackground: Container(
+            color: Colors.green,
+            child: Icon(
+              Icons.thumb_up,
+              color: Colors.white,
             ),
-            onDismissed: (DismissDirection direction) {
-              setState(() {
-                li.removeAt(index);
-              });
-              Scaffold.of(ctx).showSnackBar(
-                SnackBar(
-                  content: Text(direction == DismissDirection.startToEnd ? "$item Deleted" : "$item Liked"),
-                  action: SnackBarAction(
-                    label: "Undo",
-                    onPressed: () {
-                      setState(() {
-                        li.insert(index, item);
-                      });
-                    },
-                  ),
+            alignment: Alignment.centerRight,
+          ),
+          onDismissed: (DismissDirection direction) {
+            setState(() {
+              li.removeAt(index);
+            });
+            Scaffold.of(ctx).showSnackBar(
+              SnackBar(
+                content: Text(direction == DismissDirection.startToEnd ? "$item Deleted" : "$item Liked"),
+                action: SnackBarAction(
+                  label: "Undo",
+                  onPressed: () {
+                    setState(() {
+                      li.insert(index, item);
+                    });
+                  },
                 ),
-              );
-            },
-          );
-        },
-      ),
+              ),
+            );
+          },
+        );
+      },
     );
   }
 
