@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
             background: Container(
               color: Colors.red,
               child: Icon(
-                Icons.delete,
+                Icons.auto_delete,
                 color: Colors.white,
               ),
               alignment: Alignment.centerRight,
