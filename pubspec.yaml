@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   marquee: ^2.2.0
   image_picker: ^0.8.4+1
+  percent_indicator: ^3.4.0
 
 dev_dependencies:
   flutter_test:
