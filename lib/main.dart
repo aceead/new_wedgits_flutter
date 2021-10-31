@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             secondaryBackground: Container(
               color: Colors.green,
               child: Icon(
-                Icons.edit,
+                Icons.thumb_up,
                 color: Colors.white,
               ),
               alignment: Alignment.centerRight,
