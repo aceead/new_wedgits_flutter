@@ -89,7 +89,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             background: Container(
               color: Colors.red,
-              child: Icon(Icons.delete),
+              child: Icon(
+                Icons.delete,
+                color: Colors.white,
+              ),
               alignment: Alignment.centerRight,
             ),
             onDismissed: (DismissDirection direction) {
